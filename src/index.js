@@ -1,10 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+// Importing from node_modules
+import React from 'react'; // importing official react core library
+import ReactDOM from 'react-dom/client'; // import react-dom package for working with the DOM.
+
+// Importing css
+import './index.css'; // importing global styles
+
+// Importing custom modules
+import App from './App'; //importing App component 
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+// App component is rendered in the div which has an id root 
 root.render(
   <React.StrictMode>
     <App />
