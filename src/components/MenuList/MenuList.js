@@ -1,4 +1,4 @@
-// Functional component with Arrow Function 
+// Functional component with Arrow Function
 const MenuList = () => {
   // must return JSX
   return (
@@ -20,7 +20,7 @@ const MenuList = () => {
       </li>
     </ul>
   );
-}
+};
 
 // exporting the component
 export default MenuList;

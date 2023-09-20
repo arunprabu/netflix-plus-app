@@ -21,8 +21,6 @@ React
 Creating React App 
   npx create-react-app my-app
 
-TO LEARN: Naming conventions & Casing Types
-
 Components 
 ============
   1. Functional Components (To learn)
@@ -37,7 +35,7 @@ JSX & its Limitations
 ==============
   * will look like HTML --but not 
   * all tags must be closed -- either self-close or separately close 
-  * class should become className 
+  * class attribute should become className 
 
 
 Project Structure
@@ -66,6 +64,55 @@ Concepts
   Rest API calls 
   Lazy Loading 
 
+===========
+Naming conventions & Casing Types
+----
+  Casing Types 
+  --------
+    1. PascalCase 
+        * Recommended for Object Oriented Program's classes 
+        * Recommended for React Components and the folder of the components
+        * also Recommended for Interface in Java & TypeScript 
 
+        examples 
+        ---
+          class CarDetails {
 
+          }
+
+          interface Employee {
+
+          }
+
+    2. camelCase 
+        * Recommended for variables, const, functions, methods in JS & TS 
+        * Recommended for id's of html elements 
+
+        examples 
+        -----
+          var myCar = 'BMW';
+
+          function getCarInfo() {
+            //....
+          }
+    
+    3. kebab-case
+        * Recommended for URLs 
+        * Recommended for file names, folder names, assets in front end projects  
+        * Recommended for css classes 
+        * okay for id's of html elements if your architect accepts
+
+        examples 
+        -----
+          btn-primary
+          slideshow-container 
+          youtube-logo.png 
+
+    4. snake_case 
+        * never ever use this. 
+        * okay for const in JS & TS if architect accepts
+
+        examples
+        ---
+          const MAX_STUDENTS_PER_CLASS = 30;
 

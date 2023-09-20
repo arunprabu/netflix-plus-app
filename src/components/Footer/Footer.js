@@ -1,7 +1,5 @@
 import MenuList from "../MenuList/MenuList";
 
-
-
 // Functional component with Anonymous Function
 const Footer = function () {
   const copyrightYear = 2023;
