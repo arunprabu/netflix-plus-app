@@ -12,7 +12,7 @@ function App() {
     <div>
       <Header></Header>
 
-      <main className="mt-5 pt-2">
+      <main className="mt-5 pt-2 container">
         <HomePage />
       </main>
 

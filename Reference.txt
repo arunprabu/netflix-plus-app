@@ -42,6 +42,13 @@ Project Structure
 ============
   src/
     components/
+      Header/
+      Footer/
+      MenuList/
+    pages/  
+      HomePage/
+        LatestVideo/
+    
 
 
 Concepts 
@@ -115,4 +122,21 @@ Naming conventions & Casing Types
         examples
         ---
           const MAX_STUDENTS_PER_CLASS = 30;
+
+
+Data Binding 
+---
+  * keeping the data in variables in component and displaying it in comp's jsx 
+
+Cross Component Communication 
+----
+  1. Parent to Child Component Communication 
+      using props 
+      
+  2. Child to Parent Component Communication
+
+  3. Any to Any Component Communication
+
+
+
 
