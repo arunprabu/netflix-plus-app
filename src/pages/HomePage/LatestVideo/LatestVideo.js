@@ -14,7 +14,7 @@ const LatestVideo = (props) => {
       <img src={props.thumbnailUrl} className="card-img-top" alt="..." />
       <div className="card-body">
         <h5 className="card-title">{props.title}</h5>
-        <p className="card-text">{props.description}</p>
+        <p className="card-text">{props.children}</p>
       </div>
       <ul className="list-group list-group-flush">
         <li className="list-group-item">{props.views} Views</li>
