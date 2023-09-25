@@ -3,7 +3,7 @@ import MenuList from "../MenuList/MenuList";
 // Functional component with Anonymous Function
 const Footer = function () {
   const copyrightYear = 2023;
-
+  
   // must return JSX
   return (
     <footer className="text-center">

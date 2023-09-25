@@ -7,7 +7,6 @@ const LatestVideo = (props) => {
   // props are read-only
   // props.title = "New Title"; // this will throw an error
   // props are objects
-  /// TO TEACH: props children
 
   return (
     <div className="card">

@@ -1,6 +1,8 @@
 import LatestVideo from "./LatestVideo/LatestVideo";
+import TrendingVideos from "./TrendingVideos/TrendingVideos";
 
 const HomePage = () => {
+  
   return (
     <div>
       <h1 className="text-center">Let's learn about Core React Concepts!</h1>
@@ -54,8 +56,10 @@ const HomePage = () => {
         </div>
       </div>
 
-      {/* <h2>Trending Videos | Demo of States, Events</h2>
+      <h2>Trending Videos | Demo of States, Events</h2>
+      <TrendingVideos />
 
+      {/* 
       <h2>
         Recommended Videos | Demo of States, Events, Conditional Rendering,
         Lists & Keys

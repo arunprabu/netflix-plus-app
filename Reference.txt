@@ -28,7 +28,17 @@ Components
       1.2 Functional component with Anonymous Function [DONE]
       1.3 Functional component with Arrow Function [DONE] [RECOMMENDED]
 
+      * are coded with functions 
+      * were called as stateless components / dumb components (before react v 16.8)
+      * react introduced hooks in react v16.8. that offered support to keep state in functional components 
+      * can connect to rest api using react hook 
+
+
   2. Class Components (NOT RECOMMENDED)
+      * coded with class 
+      * were called as stateful components / smart components / containers 
+      * connecting to rest api was possible with life cycle hook methods 
+    
 
 
 JSX & its Limitations 
@@ -137,6 +147,29 @@ Cross Component Communication
 
   3. Any to Any Component Communication
 
+
+
+React Hooks 
+------------
+  * introduced in 2019, in react v16.8.
+  * help functional components have state data, and connect to back end using hooks 
+  
+  Rules of Hooks
+  ----------
+    Hooks are JavaScript functions, but they impose two additional rules:
+
+    1. Only call Hooks at the top level. Don't call Hooks inside loops, conditions, or nested functions.
+    2. Only call Hooks from React function components. 
+        Don't call Hooks from regular JavaScript functions. 
+        (There is just one other valid place to call Hooks — your own custom Hooks. We'll learn about them later.)
+
+
+    useState() 
+    useEffect() 
+    useRef()
+    useReducer()
+    useContext() 
+    useId() 
 
 
 
