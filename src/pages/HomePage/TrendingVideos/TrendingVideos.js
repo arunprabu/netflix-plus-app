@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import TrendingVideo from './TrendingVideo/TrendingVideo';
 
 const TrendingVideos = () => {
   // state -- is a placeholder to keep component wide updateable data 
@@ -8,6 +9,41 @@ const TrendingVideos = () => {
   // using a hook called useState
   const [resolution, setResolution] = useState("4K");
   console.log(resolution);
+
+  const [videos, setVideos] = useState([
+    {
+      id: 1,
+      title: "BBC Earth: The Power of Nature",
+      thumbnailUrl: "https://placehold.co/400x250?text=BBC+Earth",
+      description: "lorem ipsum dolor sit amet",
+      views: "1M",
+      publishedOn: "yesterday",
+    },
+    {
+      id: 2,
+      title: "Expendables 4: The Final Battle",
+      thumbnailUrl: "https://placehold.co/400x250?text=Expendables+4",
+      description: "lorem ipsum dolor sit amet",
+      views: "1.2M",
+      publishedOn: "2 days ago",
+    },
+    {
+      id: 3,
+      title: "Squid Games",
+      thumbnailUrl: "https://placehold.co/400x250?text=Squid+Games",
+      description: "lorem ipsum dolor sit amet",
+      views: "1.5M",
+      publishedOn: "3 days ago",
+    },
+    {
+      id: 4,
+      title: "Money Heist Season 5",
+      thumbnailUrl: "https://placehold.co/400x250?text=Money+Heist+Season+5",
+      description: "lorem ipsum dolor sit amet",
+      views: "1.6M",
+      publishedOn: "4 days ago",
+    }
+  ]);
   
   const handleChangeResolution = () => {
     setResolution('8K');
@@ -16,20 +52,50 @@ const TrendingVideos = () => {
   return (
     <div className="row">
       <p>Enjoy the trending videos in stunning {resolution} resolution</p>
-      <button onClick={handleChangeResolution}>Change resolution</button>
+      <button onClick={handleChangeResolution} className="btn btn-primary">
+        Change resolution
+      </button>
+
+      <p>Videos Found: {videos.length}</p>
 
       <div className="col-md-3">
-        <div className="card">
-          <img src="" className="card-img-top" alt="..." />
-          <div className="card-body">
-            <h5 className="card-title">random video #1</h5>
-            <p className="card-text">...... desc </p>
-          </div>
-          <ul className="list-group list-group-flush">
-            <li className="list-group-item">1M Views</li>
-            <li className="list-group-item">Published yesterday</li>
-          </ul>
-        </div>
+        <TrendingVideo
+          title={videos[0].title}
+          thumbnailUrl={videos[0].thumbnailUrl}
+          description={videos[0].description}
+          views={videos[0].views}
+          publishedOn={videos[0].publishedOn}
+        />
+      </div>
+
+      <div className="col-md-3">
+        <TrendingVideo
+          title={videos[1].title}
+          thumbnailUrl={videos[1].thumbnailUrl}
+          description={videos[1].description}
+          views={videos[1].views}
+          publishedOn={videos[1].publishedOn}
+        />
+      </div>
+
+      <div className="col-md-3">
+        <TrendingVideo
+          title={videos[2].title}
+          thumbnailUrl={videos[2].thumbnailUrl}
+          description={videos[2].description}
+          views={videos[2].views}
+          publishedOn={videos[2].publishedOn}
+        />
+      </div>
+
+      <div className="col-md-3">
+        <TrendingVideo
+          title={videos[3].title}
+          thumbnailUrl={videos[3].thumbnailUrl}
+          description={videos[3].description}
+          views={videos[3].views}
+          publishedOn={videos[3].publishedOn}
+        />
       </div>
     </div>
   );

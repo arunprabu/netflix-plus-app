@@ -48,11 +48,14 @@ JSX & its Limitations
   * class attribute should become className 
 
 
-Project Structure
+Project Structure if you are doing unit testing inside src and individual components
 ============
   src/
     components/
       Header/
+        Header.js
+        Header.css
+        Header.test.js 
       Footer/
       MenuList/
     pages/  
@@ -60,25 +63,46 @@ Project Structure
         LatestVideo/
     
 
+Project Structure if you are doing unit testing inside src within __tests__ folder
+============
+  src/
+    components/
+      Header.js 
+      Footer.js 
+      MenuList.js 
+    pages/
+      HomePage/
+        HomePage.js 
+        LatestVideo.js
+        TrendingVideos.js 
+        TrendingVideo.js 
+      AboutPage/
+        AboutPage.js 
+        Company.js 
+    __tests__
+      
+
+
 
 Concepts 
 -----
   JSX 
   Data Binding
-  Props 
-  States
-  Events 
-  Updating States 
+  Props [DONE]
+  States [DONE]
+  Events [PARTIALLY]
+  Updating States [PARTIALLY]
 
   Lists and Keys 
   Sharing data between different components 
 
   Styles 
   Hooks 
+  Rest API calls 
 
   Unit Testing 
 
-  Rest API calls 
+
   Lazy Loading 
 
 ===========
