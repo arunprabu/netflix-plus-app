@@ -90,10 +90,11 @@ Concepts
   Data Binding
   Props [DONE]
   States [DONE]
-  Events [PARTIALLY]
-  Updating States [PARTIALLY]
+  Events [DONE]
+  Updating States [DONE]
 
-  Lists and Keys 
+  Lists and Keys [DONE]
+
   Sharing data between different components 
 
   Styles 
@@ -101,7 +102,7 @@ Concepts
   Rest API calls 
 
   Unit Testing 
-
+  
 
   Lazy Loading 
 
@@ -164,10 +165,10 @@ Data Binding
 
 Cross Component Communication 
 ----
-  1. Parent to Child Component Communication 
+  1. Parent to Child Component Communication [DONE]
       using props 
       
-  2. Child to Parent Component Communication
+  2. Child to Parent Component Communication [TODO]
 
   3. Any to Any Component Communication
 
