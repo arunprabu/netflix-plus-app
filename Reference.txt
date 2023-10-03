@@ -201,6 +201,12 @@ React Hooks
 TO TEACH: Styles with css modules 
 ---
 
+Styling in React 
+----
+  1. Global styles [DONE]
+  2. Component Specific Style [DONE]
+  3. Internal Styles 
+  4. Inline Styles 
 
-
+  
 

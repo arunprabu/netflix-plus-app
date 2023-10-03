@@ -32,7 +32,7 @@ const RecommendedVideos = () => {
     },
     {
       id: 4,
-      title: "Lost in Space",
+      title: "The Jungle Book",
       thumbnailUrl: "https://placehold.co/400x250?text=Lost+in+Space",
       description: "lorem ipsum dolor sit amet",
       views: "1.6M",
