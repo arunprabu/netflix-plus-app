@@ -1,0 +1,5 @@
+/* is this a component-specific css? YES.
+Because we follow css module here. and it is imported in Footer.js only */
+.borderRed {
+  border: solid 2px red;
+}

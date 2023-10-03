@@ -1,5 +1,6 @@
 import LatestVideo from "./LatestVideo/LatestVideo";
 import RecommendedVideos from "./RecommendedVideos/RecommendedVideos";
+import Subscription from "./Subscription/Subscription";
 import TrendingVideos from "./TrendingVideos/TrendingVideos";
 
 const HomePage = () => {
@@ -67,6 +68,10 @@ const HomePage = () => {
         Lists & Keys
       </h2>
       <RecommendedVideos />
+      
+      <hr/>
+      <h2>Demo of Styles in React App</h2>
+      <Subscription />
     </div>
   );
 };

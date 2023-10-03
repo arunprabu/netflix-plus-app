@@ -87,7 +87,7 @@ Project Structure if you are doing unit testing inside src within __tests__ fold
 Concepts 
 -----
   JSX 
-  Data Binding
+  Data Binding [DONE]
   Props [DONE]
   States [DONE]
   Events [DONE]
@@ -129,6 +129,7 @@ Naming conventions & Casing Types
     2. camelCase 
         * Recommended for variables, const, functions, methods in JS & TS 
         * Recommended for id's of html elements 
+        * if your architect approves, you can have css classes in this convention
 
         examples 
         -----
@@ -168,10 +169,9 @@ Cross Component Communication
   1. Parent to Child Component Communication [DONE]
       using props 
       
-  2. Child to Parent Component Communication [TODO]
+  2. Child to Parent Component Communication [TODO] [DONE]
 
   3. Any to Any Component Communication
-
 
 
 React Hooks 
