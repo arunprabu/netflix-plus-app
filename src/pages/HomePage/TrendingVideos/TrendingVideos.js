@@ -58,7 +58,7 @@ const TrendingVideos = () => {
 
       <p>Videos Found: {videos.length}</p>
 
-      <div className="col-md-4">
+      <div className="col-md-3">
         <TrendingVideo
           title={videos[0].title}
           thumbnailUrl={videos[0].thumbnailUrl}

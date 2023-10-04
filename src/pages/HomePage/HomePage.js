@@ -70,7 +70,7 @@ const HomePage = () => {
       <RecommendedVideos />
       
       <hr/>
-      <h2>Demo of Styles in React App</h2>
+      <h2>Subscription | Demo of Styles in React App</h2>
       <Subscription />
     </div>
   );

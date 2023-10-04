@@ -46,6 +46,8 @@ JSX & its Limitations
   * will look like HTML --but not 
   * all tags must be closed -- either self-close or separately close 
   * class attribute should become className 
+  * style attribute should accept styles as object 
+
 
 
 Project Structure if you are doing unit testing inside src and individual components
@@ -83,7 +85,6 @@ Project Structure if you are doing unit testing inside src within __tests__ fold
       
 
 
-
 Concepts 
 -----
   JSX 
@@ -95,16 +96,34 @@ Concepts
 
   Lists and Keys [DONE]
 
-  Sharing data between different components 
+  Sharing data between different components [PARTIALLY DONE]
+    Any to Any component Communication is pending 
 
-  Styles 
+  Styles [DONE]
+  JSX in Depth [DONE]
+  Debugging 
+  PropTypes 
+  Higher Order Components
+  Render Props [TODO]
+  
   Hooks 
+    useState()    - [DONE]
+    useEffect() 
+    useRef()
+    useReducer()
+    useContext() 
+    useId()        - [TODO]
+    useMemo(), 
+    useCallback()
+    Custom Hooks
+
   Rest API calls 
 
   Unit Testing 
-  
 
+  Performance Tuning
   Lazy Loading 
+  
 
 ===========
 Naming conventions & Casing Types
@@ -170,8 +189,12 @@ Cross Component Communication
       using props 
       
   2. Child to Parent Component Communication [TODO] [DONE]
+      using props and passing event handler to the child comp and executing 
 
   3. Any to Any Component Communication
+      3.1 using Context API
+      3.2 using redux framework (third party tool)
+
 
 
 React Hooks 
@@ -188,25 +211,67 @@ React Hooks
         Don't call Hooks from regular JavaScript functions. 
         (There is just one other valid place to call Hooks — your own custom Hooks. We'll learn about them later.)
 
-
     useState() 
     useEffect() 
     useRef()
     useReducer()
     useContext() 
-    useId() 
+    useId()
+    useMemo(), 
+    useCallback()
 
+  Custom Hooks
 
-
-TO TEACH: Styles with css modules 
----
 
 Styling in React 
 ----
   1. Global styles [DONE]
-  2. Component Specific Style [DONE]
-  3. Internal Styles 
-  4. Inline Styles 
+  2. Component Specific Styles using css modules [DONE]
+  3. Internal Styles [DONE]
+  4. Inline Styles [DONE]
+  5. Learn about styled-components [TODO]
 
+==================
+Routing in React JS 
+---------
+
+SPA (Single Page Apps)
+----------------------
+  7 Characteristics
+  ==================
+    1. Pages should not reload / refresh [DONE]
+    2. URL should change [DONE]
+    3. History should be maintained w/o page refresh [DONE]
+    4. Header and footer should not be loaded again and again [DONE]
+    5. The section in b/w header and footer should show contextual updates [DONE]
+    6. Active menu should be set [TODO]
+    7. Page Title should also be changed [TODO]
+
+Let's Intergrate react-router-dom to make our app as SPA 
+================
+  Step 0. npm i react-router-dom 
+  Step 1. Identify the Menus and the URLs 
+          Home          - localhost:3000/
+          About Us      - localhost:3000/about-us 
+          Contact Us    - localhost:3000/contact-us 
+
+          Let's update the URLs properly in MenuList comp 
+ 
+  Step 2: Let's create AboutUsPage, ContactUsPage components 
+
+  Step 3: Let's config the routes in App component. have the entire app, under
+          the control of BrowserRouter of react-router-dom. 
+          Then, have the routing config.
+
+  Step 4: Check the App. URL will change. 
+          Section in between header and footer will get updated. 
+
+          Pages are still getting refreshed. Let's fix. 
+          replace <a href with <Link    in MenuList comp  
   
+          It's over! Now we have SPA. 
+
+---------
+
+
 
