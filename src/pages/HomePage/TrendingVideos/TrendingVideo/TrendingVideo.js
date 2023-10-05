@@ -1,4 +1,4 @@
-import React from 'react'
+import PropTypes from 'prop-types'; //npm i prop-types
 
 const TrendingVideo = ({title, description, thumbnailUrl, views, publishedOn}) => { // destructuring props object
   
@@ -20,5 +20,12 @@ const TrendingVideo = ({title, description, thumbnailUrl, views, publishedOn}) =
     </div>
   );
 }
+TrendingVideo.propTypes = {
+  title: PropTypes.string,
+  description: PropTypes.string,
+  thumbnailUrl: PropTypes.string,
+  views: PropTypes.string,
+  publishedOn: PropTypes.string
+};
 
 export default TrendingVideo

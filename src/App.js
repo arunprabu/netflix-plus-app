@@ -6,6 +6,7 @@ import Header from "./components/Header/Header";
 import HomePage from "./pages/HomePage/HomePage";
 import AboutUsPage from "./pages/AboutUsPage/AboutUsPage";
 import ContactUsPage from "./pages/ContactUsPage/ContactUsPage";
+import { ErrorBoundary } from "react-error-boundary";
 
 // App Component Definition
 // this is the ideal place for the layout
@@ -13,17 +14,25 @@ function App() {
   // must return JSX
   return (
     <BrowserRouter>
-      <Header></Header>
+      <ErrorBoundary
+        fallback={
+          <div className="alert alert-danger">
+            Something went wrong. Try again later
+          </div>
+        }
+      >
+        <Header></Header>
 
-      <main className="mt-5 pt-2 container">
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about-us" element={<AboutUsPage />} />
-          <Route path="/contact-us" element={<ContactUsPage />} />
-        </Routes>
-      </main>
+        <main className="mt-5 pt-2 container">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about-us" element={<AboutUsPage />} />
+            <Route path="/contact-us" element={<ContactUsPage />} />
+          </Routes>
+        </main>
 
-      <Footer />
+        <Footer />
+      </ErrorBoundary>
     </BrowserRouter>
   );
 }

@@ -101,10 +101,12 @@ Concepts
 
   Styles [DONE]
   JSX in Depth [DONE]
-  Debugging 
-  PropTypes 
-  Higher Order Components
+  PropTypes [DONE]
+  Debugging [DONE]
+  Error Boundary [DONE]
+  Higher Order Components 
   Render Props [TODO]
+  Fragments [DONE]
   
   Hooks 
     useState()    - [DONE]
@@ -272,6 +274,17 @@ Let's Intergrate react-router-dom to make our app as SPA
           It's over! Now we have SPA. 
 
 ---------
+Static Type Checking in ReactJS App 
+------
+  1. TypeScript
+  2. Flow JS [NOT RECOMMENDED]
+  3. PropTypes [Recommended in JS based React projects]
 
+Debugging
+-----
+  Errors 
+  -----
+    1. Compilation Error 
+    2. Runtime Error 
 
-
+  ErrorBoundary 
