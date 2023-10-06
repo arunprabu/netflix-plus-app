@@ -7,6 +7,9 @@ import HomePage from "./pages/HomePage/HomePage";
 import AboutUsPage from "./pages/AboutUsPage/AboutUsPage";
 import ContactUsPage from "./pages/ContactUsPage/ContactUsPage";
 import { ErrorBoundary } from "react-error-boundary";
+import UsersPage from "./pages/UsersPage/UsersPage";
+import AddUser from "./pages/UsersPage/AddUser/AddUser";
+import UserDetails from "./pages/UsersPage/UserDetails/UserDetails";
 
 // App Component Definition
 // this is the ideal place for the layout
@@ -26,6 +29,10 @@ function App() {
         <main className="mt-5 pt-2 container">
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/users" element={<UsersPage />} />
+            <Route path="/users/add" element={<AddUser />} />
+            {/* URL Param - userId */}
+            <Route path="/users/:userId" element={<UserDetails />} />
             <Route path="/about-us" element={<AboutUsPage />} />
             <Route path="/contact-us" element={<ContactUsPage />} />
           </Routes>

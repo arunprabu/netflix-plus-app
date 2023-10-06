@@ -288,3 +288,23 @@ Debugging
     2. Runtime Error 
 
   ErrorBoundary 
+
+===========
+
+CRUD App 
+User Management App
+  Add User 
+    localhost:3000/users/add 
+
+  List Users 
+    localhost:3000/users
+
+  User Details 
+    localhost:3000/users/1
+    localhost:3000/users/2
+
+  Update User [TODO]
+    localhost:3000/users/1/update
+  
+  Delete User [TODO]
+    localhost:3000/users/1
