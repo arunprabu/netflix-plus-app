@@ -7,8 +7,10 @@ const UsersPage = () => {
   // 1. What's the REST API URL? https://jsonplaceholder.typicode.com/users
   // 2. What's the HTTP Method? GET
   // 3. What's the REST API Client Tool? // axios (third party tool) / fetch (native JS api)
-  console.log('1. Program Started');
+  console.log("1. Program Started");
+  const [isLoading, setIsLoading] = useState(true);
   const [users, setUsers] = useState([]);
+  const [isError, setIsError] = useState(false);
 
   useEffect(() => {
     // this will be called after initial rendering
@@ -23,15 +25,18 @@ const UsersPage = () => {
       .catch((err) => {
         // if error occurs
         console.log(err);
+        setIsError(true);
       })
       .finally(() => {
         // will be called at last
+        setIsLoading(false);
         console.log("It is over!");
       });
     console.log("3. Inside useEffect");
   }, []);
 
-  console.log('2. Program Ended');
+  console.log("2. Program Ended");
+
   return (
     <section className="py-5 container">
       <div className="row py-lg-5 text-center ">
@@ -52,12 +57,22 @@ const UsersPage = () => {
 
       <div className="row">
         <h2>Listing Users</h2>
+        {isLoading && <div className="spinner-border text-success"></div>}
+
+        {isError && (
+          <div className="alert alert-danger">
+            Some Error Occurred! Try again Later!
+          </div>
+        )}
+
         {users.map((user) => {
           return (
             <div className="col-md-3" key={user.id}>
               <div className="card">
                 <div className="card-body">
-                  <h5 className="card-title">#{user.id} {user.name}</h5>
+                  <h5 className="card-title">
+                    #{user.id} {user.name}
+                  </h5>
                   <h6 className="card-subtitle mb-2 text-body-secondary">
                     Email: {user.email}
                   </h6>
@@ -70,7 +85,6 @@ const UsersPage = () => {
             </div>
           );
         })}
-        
       </div>
     </section>
   );
