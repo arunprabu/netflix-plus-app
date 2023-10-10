@@ -73,9 +73,6 @@ const UsersPage = () => {
                   <h5 className="card-title">
                     #{user.id} {user.name}
                   </h5>
-                  <h6 className="card-subtitle mb-2 text-body-secondary">
-                    Email: {user.email}
-                  </h6>
                   <p className="card-text">Phone: {user.phone}</p>
                   <Link to={`/users/${user.id}`} className="card-link">
                     View More

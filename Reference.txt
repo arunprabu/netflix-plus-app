@@ -293,13 +293,13 @@ Debugging
 
 CRUD App 
 User Management App
-  Add User 
+  Add User [DONE]
     localhost:3000/users/add 
 
   List Users [DONE]
     localhost:3000/users
 
-  User Details 
+  User Details [DONE]
     localhost:3000/users/1
     localhost:3000/users/2
 
