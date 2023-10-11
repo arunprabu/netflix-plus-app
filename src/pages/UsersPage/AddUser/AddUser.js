@@ -54,6 +54,7 @@ const AddUser = () => {
             <label htmlFor="nameInput" className="form-label">
               Name
             </label>
+            {/* Controlled Component  */}
             <input
               type="text"
               className="form-control"

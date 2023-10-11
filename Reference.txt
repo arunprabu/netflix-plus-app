@@ -87,7 +87,7 @@ Project Structure if you are doing unit testing inside src within __tests__ fold
 
 Concepts 
 -----
-  JSX 
+  JSX [DONE]
   Data Binding [DONE]
   Props [DONE]
   States [DONE]
@@ -104,28 +104,30 @@ Concepts
   PropTypes [DONE]
   Debugging [DONE]
   Error Boundary [DONE]
-  Higher Order Components 
+  Higher Order Components [DONE]
   Render Props [TODO]
   Fragments [DONE]
   
-  Hooks 
+  Hooks [4.5 hours]
     useState()    - [DONE]
-    useEffect() 
-    useRef()
+    useEffect()   - [DONE]
+    useRef()  
     useReducer()
     useContext() 
     useId()        - [TODO]
     useMemo(), 
     useCallback()
-    Custom Hooks
+    Custom Hooks [15-30 mins]
 
-  Rest API calls 
+  Rest API calls [DONE]
 
-  Unit Testing 
+  Unit Testing [4.5 hours]
 
-  Performance Tuning
-  Lazy Loading 
+  Performance Tuning [10 mins]
+  Lazy Loading [10 mins]
+  Build and Deploy [10 mins]
   
+  Redux [1 hour]
 
 ===========
 Naming conventions & Casing Types

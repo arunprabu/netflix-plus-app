@@ -10,6 +10,8 @@ import { ErrorBoundary } from "react-error-boundary";
 import UsersPage from "./pages/UsersPage/UsersPage";
 import AddUser from "./pages/UsersPage/AddUser/AddUser";
 import UserDetails from "./pages/UsersPage/UserDetails/UserDetails";
+import HocDemoPage from "./pages/HocDemoPage/HocDemoPage";
+import TodosPage from "./pages/TodosPage/TodosPage";
 
 // App Component Definition
 // this is the ideal place for the layout
@@ -33,6 +35,8 @@ function App() {
             <Route path="/users/add" element={<AddUser />} />
             {/* URL Param - userId */}
             <Route path="/users/:userId" element={<UserDetails />} />
+            <Route path="/hoc" element={<HocDemoPage />} />
+            <Route path="/todos" element={<TodosPage />} />
             <Route path="/about-us" element={<AboutUsPage />} />
             <Route path="/contact-us" element={<ContactUsPage />} />
           </Routes>
