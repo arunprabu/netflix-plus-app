@@ -12,7 +12,7 @@ Reducer?
     * can have optional payload 
 */
 
-export const todoReducer = (state, action) => {
+export const todoReducer = ( state = [], action) => {
   console.log(state); // state logic -- array of obj
   console.log(action); // action object with type property and payload (optional)
   return state;
