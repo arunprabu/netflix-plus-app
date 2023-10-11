@@ -111,7 +111,7 @@ Concepts
   Hooks [4.5 hours]
     useState()    - [DONE]
     useEffect()   - [DONE]
-    useRef()  
+    useRef()   [DONE]
     useReducer()
     useContext() 
     useId()        - [TODO]
