@@ -11,7 +11,7 @@ const HocDemoPage = () => {
     <div>
       <h1>Higher Order Components (HOC) Demo Page</h1>
 
-      <StyledHello name="John" />
+      <StyledHello name="John"/>
       <StyledBye name="John" />
     </div>
   );

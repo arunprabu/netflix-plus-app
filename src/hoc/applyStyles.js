@@ -6,7 +6,7 @@ const applyStyles = (OriginalComponent) => { // receiving the component as input
   const NewComponent = (props) => {
     return (
       <div className="red-box">
-        <OriginalComponent {...props}/>
+        <OriginalComponent {...props} />
       </div>
     );
   }

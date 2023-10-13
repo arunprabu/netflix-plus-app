@@ -15,5 +15,19 @@ Reducer?
 export const todoReducer = ( state = [], action) => {
   console.log(state); // state logic -- array of obj
   console.log(action); // action object with type property and payload (optional)
-  return state;
+
+  switch(action.type) {
+    case "LIST_TODOS":
+      return action.payload;
+      
+    case 'ADD_TODO': 
+      return [
+        ...state,
+        action.payload
+      ];
+
+    default: 
+      return state;
+  }
 };
+

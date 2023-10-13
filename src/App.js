@@ -12,9 +12,19 @@ import AddUser from "./pages/UsersPage/AddUser/AddUser";
 import UserDetails from "./pages/UsersPage/UserDetails/UserDetails";
 import HocDemoPage from "./pages/HocDemoPage/HocDemoPage";
 import TodosPage from "./pages/TodosPage/TodosPage";
+import { PageContext } from "./contexts/PageContext";
 
 // App Component Definition
 // this is the ideal place for the layout
+
+// Step 2 of any to any comp commn using context api
+// Let's keep some data in a variable
+const userStatus = {
+  username: 'john', 
+  isPremiumUser: true,
+  lastLogin: new Date()
+}
+
 function App() {
   // must return JSX
   return (
@@ -27,23 +37,29 @@ function App() {
         }
       >
         <Header></Header>
-
+        
         <main className="mt-5 pt-2 container">
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/users" element={<UsersPage />} />
-            <Route path="/users/add" element={<AddUser />} />
-            {/* URL Param - userId */}
-            <Route path="/users/:userId" element={<UserDetails />} />
-            <Route path="/hoc" element={<HocDemoPage />} />
-            <Route path="/todos" element={<TodosPage />} />
-            <Route path="/about-us" element={<AboutUsPage />} />
-            <Route path="/contact-us" element={<ContactUsPage />} />
-          </Routes>
+          {/* Step 2 of of any to any comp commn using context api continues... 
+          -- Providing data here */}
+          <PageContext.Provider value={userStatus}>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/users" element={<UsersPage />} />
+              <Route path="/users/add" element={<AddUser />} />
+              {/* URL Param - userId */}
+              <Route path="/users/:userId" element={<UserDetails />} />
+              <Route path="/hoc" element={<HocDemoPage />} />
+              <Route path="/todos" element={<TodosPage />} />
+              <Route path="/about-us" element={<AboutUsPage />} />
+              <Route path="/contact-us" element={<ContactUsPage />} />
+            </Routes>
+          </PageContext.Provider>
         </main>
 
         <Footer />
+        
       </ErrorBoundary>
+      
     </BrowserRouter>
   );
 }

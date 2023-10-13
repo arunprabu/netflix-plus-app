@@ -1,8 +1,9 @@
+import { PageContext } from "../../contexts/PageContext";
 import MenuList from "../MenuList/MenuList";
-import Footer from '../Footer/Footer';
 
 // Functional component with Named Function
 function Header() {
+
   // must return JSX
   return (
     <header>

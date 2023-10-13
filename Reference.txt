@@ -112,7 +112,7 @@ Concepts
     useState()    - [DONE]
     useEffect()   - [DONE]
     useRef()   [DONE]
-    useReducer()
+    useReducer() [DONE]
     useContext() 
     useId()        - [TODO]
     useMemo(), 
@@ -315,3 +315,11 @@ Forms in React
 ----
   1. React Hook Form (Recommended)
   2. Formik
+
+
+Context API and useContext Hook 
+----
+  1. create context using createContext() fn 
+  2. Let's provide the data thru the context to the select number of components 
+  3. get the data from the desired component using useContext() Hook 
+
