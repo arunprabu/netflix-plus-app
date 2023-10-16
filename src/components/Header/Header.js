@@ -1,4 +1,3 @@
-import { PageContext } from "../../contexts/PageContext";
 import MenuList from "../MenuList/MenuList";
 
 // Functional component with Named Function

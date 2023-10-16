@@ -96,7 +96,7 @@ Concepts
 
   Lists and Keys [DONE]
 
-  Sharing data between different components [PARTIALLY DONE]
+  Sharing data between different components [DONE]
     Any to Any component Communication is pending 
 
   Styles [DONE]
@@ -113,15 +113,21 @@ Concepts
     useEffect()   - [DONE]
     useRef()   [DONE]
     useReducer() [DONE]
-    useContext() 
+    useContext() [DONE]
     useId()        - [TODO]
-    useMemo(), 
-    useCallback()
-    Custom Hooks [15-30 mins]
+    useMemo(),   [EXPLORE]
+    useCallback() [EXPLORE]
+    Custom Hooks [DONE]
+      Refer the following
+        https://usehooks.com/
+        https://react-hooks-library.vercel.app/
+        https://ahooks.js.org/
+        https://github.com/arunprabu/react-course-batch2-apr2023/blob/master/prime-video-app-apr2023/src/hooks/useFetch.js
+        https://www.w3schools.com/react/react_customhooks.asp
 
   Rest API calls [DONE]
 
-  Unit Testing [4.5 hours]
+  Unit Testing [4 hours]
 
   Performance Tuning [10 mins]
   Lazy Loading [10 mins]
@@ -323,3 +329,111 @@ Context API and useContext Hook
   2. Let's provide the data thru the context to the select number of components 
   3. get the data from the desired component using useContext() Hook 
 
+
+SDLC 
+-----
+  Requirements 
+    Designs 
+      Development
+        Testing (QA)
+          Deployment 
+            Maintenance
+
+Dev => QA => (bugs) => Dev => QA => (bugs) => Dev => QA => (bugs) => Dev => QA => (QA PASSED) => Deployment
+
+
+Project Name: Calc 
+------
+  Resources: FRD, HLD, LLD, Designs
+
+  Feature: add 
+  -----
+    Dev
+    ----
+      Reference: Test Cases 
+      ------------
+        1. add should accepts only numbers as inputs 
+        2. add should produce number as output 
+        3. add button should be disabled if invalid inputs are entered 
+
+      function add(a, b) {
+        if(typeof a === 'number' && typeof b === 'number'){
+          return a + b;
+        } 
+      }
+
+      add(10, 20); // 30
+
+      // Tools to TEST 
+
+
+Software Dev Approach 
+----
+  dev should prepare test cases => dev should write the dev code => (TOOLS) => SUCCESS => Deployment 
+
+
+Automation Testing 
+------
+  0. Static Type Checking 
+      Tools: TypeScript, prop-types 
+
+  1. Unit Testing - TO LEARN 
+      * Testing tiny, independent unit of our code
+      * Testing the component in isolation (Without connecting to the REST API)
+      * Bug Reduction Density: 40-80% 
+
+      Tools: 
+        JEST JS  - [UNIT TESTING FRAMEWORK + TEST RUNNER]
+        React Testing Library (RTL) [DOM Querying Utility]
+
+  2. Integration Testing  - NOT TO LEARN IN THIS SESSION
+      * Testing components by integrating them together
+      * Testing the component with REST API Calls
+
+      Tools: 
+      ----
+        JEST JS (Unit Testing Framework + Test Runner)
+        React Testing Library - RTL (DOM Querying Utility)
+
+  3. End to End (E2E) Testing - NOT TO LEARN IN THIS SESSION
+      * Testing the whole app as one entity.
+      * Will be done by QA team members. 
+
+      Tools: 
+      ----
+        * Selenium 
+        * CypressJS 
+        * Protractor 
+        * Playwright 
+
+----
+
+
+Modern Sofware Dev Approaches 
+----
+  1. Test-Driven Development (TDD) -- TO LEARN 
+      * Write NEW CODE only if automated test fails 
+
+      Dev Writes Test cases => (FAILURE) => Dev Writes Functionality => (SUCCESS) => [CODE COMPLETE]
+    
+      Test Pattern: AAA (Arrange, Act, Assert)
+      Tools: JEST JS
+
+  2. Behaviour-Driven Development (BDD)
+      * an agile s/w methodology 
+      * app is documented, designed around the behavior the end user wants to experience when 
+        interacting with the app. 
+
+      Dev writes Test Cases around the behavior of the app => (FAILURE) => Dev Writes Functionality => (SUCCESS) => [CODE COMPLETE]
+
+      Test Pattern: Given/When/Then 
+      Tools: Jasmine JS 
+
+=====
+To Learn 
+---
+  1. How to write test cases?
+  2. Where to write test cases? 
+  3. How to test the app by tools
+
+==========
