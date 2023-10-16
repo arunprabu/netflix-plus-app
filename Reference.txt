@@ -437,3 +437,58 @@ To Learn
   3. How to test the app by tools
 
 ==========
+Unit Testing 
+----
+  1. Testing JSX 
+  2. Testing Props 
+  3. Testing useState and Event 
+  4. Testing Styles 
+  5. Snapshot Testing 
+  
+
+Project Structure with folder for every component 
+---------------
+  src/
+    components/
+      Header/
+        Header.js 
+        Header.module.css 
+        Header.test.js 
+      Footer/
+        Footer.js 
+        Footer.module.css 
+        Footer.test.js 
+      MenuList/
+        MenuList.js 
+        MenuList.test.js 
+    pages/
+    contexts/
+    reducers/
+    hoc/
+    hooks/
+
+
+Project structure wihout folder for every component + with __tests__ folder 
+-----------------------------------------------------
+  src/
+    components/
+      Header.js 
+      Footer.js 
+      MenuList.js 
+    pages/
+      AboutUsPage.js 
+      HomePage.js 
+    contexts/
+    reducers/
+    hoc/
+    hooks/
+    __tests__/
+      components/
+        Header.test.js 
+        Footer.test.js 
+        MenuList.test.js 
+      pages/
+        AboutUsPage.test.js 
+        HomePage.test.js 
+
+

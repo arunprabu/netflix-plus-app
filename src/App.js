@@ -13,6 +13,7 @@ import UserDetails from "./pages/UsersPage/UserDetails/UserDetails";
 import HocDemoPage from "./pages/HocDemoPage/HocDemoPage";
 import TodosPage from "./pages/TodosPage/TodosPage";
 import { PageContext } from "./contexts/PageContext";
+import UnitTestingDemoPage from "./pages/UnitTestingDemoPage/UnitTestingDemoPage";
 
 // App Component Definition
 // this is the ideal place for the layout
@@ -37,11 +38,12 @@ function App() {
         }
       >
         <Header></Header>
-        
+
         <main className="mt-5 pt-2 container">
           {/* Step 2 of of any to any comp commn using context api continues... 
           -- Providing data here */}
           <PageContext.Provider value={userStatus}>
+            {/* TODO: create a component for all these routes */}
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/users" element={<UsersPage />} />
@@ -52,14 +54,13 @@ function App() {
               <Route path="/todos" element={<TodosPage />} />
               <Route path="/about-us" element={<AboutUsPage />} />
               <Route path="/contact-us" element={<ContactUsPage />} />
+              <Route path="/unit-testing-demo" element={<UnitTestingDemoPage />} />
             </Routes>
           </PageContext.Provider>
         </main>
 
         <Footer />
-        
       </ErrorBoundary>
-      
     </BrowserRouter>
   );
 }
