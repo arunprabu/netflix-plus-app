@@ -434,13 +434,13 @@ To Learn
 ---
   1. How to write test cases?
   2. Where to write test cases? 
-  3. How to test the app by tools
+  3. How to test the app by using tools?
 
 ==========
 Unit Testing 
 ----
-  1. Testing JSX 
-  2. Testing Props 
+  1. Testing JSX [DONE]
+  2. Testing Props [DONE]
   3. Testing useState and Event 
   4. Testing Styles 
   5. Snapshot Testing 
@@ -492,3 +492,5 @@ Project structure wihout folder for every component + with __tests__ folder
         HomePage.test.js 
 
 
+Files Walkthru 
+---------------
