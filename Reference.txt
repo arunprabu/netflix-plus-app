@@ -441,8 +441,8 @@ Unit Testing
 ----
   1. Testing JSX [DONE]
   2. Testing Props [DONE]
-  3. Testing useState and Event 
-  4. Testing Styles 
+  3. Testing useState and Event [DONE]
+  4. Testing Styles [DONE]
   5. Snapshot Testing 
   
 

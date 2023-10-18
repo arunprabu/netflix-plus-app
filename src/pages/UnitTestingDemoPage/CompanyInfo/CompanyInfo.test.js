@@ -1,7 +1,7 @@
 // Here you write the test cases
 // How to write the Test cases? AAA
 // Arrange
-import { render, screen } from "@testing-library/react";
+import { render, screen, fireEvent } from "@testing-library/react";
 import CompanyInfo from "./CompanyInfo";
 
 // test suite = group of related test specs
@@ -43,4 +43,44 @@ describe('CompanyInfo', () => {
 
   // TODO: Testing Props -- headquarters = Teaneck, New Jersey, U.S
   // In browser I want the output to be 'Headquarters: Teaneck, New Jersey, U.S'
+
+  // Testing inline css
+  it("has Founded year text in color #ff0000", () => {
+    render(<CompanyInfo foundedYear="2001" />);
+    const foundedYear = screen.getByTestId("foundedYear");
+    // recommended to use color code in hexa or rgb -- not color name
+    expect(foundedYear).toHaveStyle("color: #ff0000");
+  });
+
+  // TODO: Testing external css -- test whether the button element has css class 'btn'
+
+  // Testing to find out whether the input has the right placeholder
+  it("has an input with Enter Country Name as placeholder", () => {
+    render(<CompanyInfo />);
+    const countryInput = screen.getByPlaceholderText("Enter Country Name");
+    expect(countryInput).toBeTruthy();
+  });
+
+  // Testing states and Events -- must in all components
+  it('displays country name USA by default and updates JSX onChange of country input', () => {
+    render(<CompanyInfo />);
+
+    // find input element
+    const countryInput = screen.getByPlaceholderText("Enter Country Name");
+    // then check whether the input has default value USA
+    expect(countryInput.value).toBe('USA');
+
+    const mockEvent = {
+      target: {
+        value: "Japan",
+      },
+    };
+    
+    // now, checking whether the onChange event handler is working or not
+    // as the comp is rendered in test runner, we can't use mouse or keyboard as input devices
+    // so, Let's trigger the event thru program
+    fireEvent.change(countryInput, mockEvent);
+    expect(countryInput.value).toBe("Japan");
+    // TODO: also check the paragraph for the country name change
+  });
 });
