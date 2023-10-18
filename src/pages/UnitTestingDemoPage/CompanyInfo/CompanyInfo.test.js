@@ -2,6 +2,7 @@
 // How to write the Test cases? AAA
 // Arrange
 import { render, screen, fireEvent } from "@testing-library/react";
+import renderer from 'react-test-renderer';
 import CompanyInfo from "./CompanyInfo";
 
 // test suite = group of related test specs
@@ -82,5 +83,14 @@ describe('CompanyInfo', () => {
     fireEvent.change(countryInput, mockEvent);
     expect(countryInput.value).toBe("Japan");
     // TODO: also check the paragraph for the country name change
+  });
+
+  // Snapshot Testing
+  it('has the right CompanyInfo component snapshot with all requirements completed', () => {
+    // To take snapshot -- we need react-test-renderer // npm i react-test-renderer -D
+    // Taking snapshot and converting it into JSON
+    // [RECOMMENDED]: Take snapshot with all possible as well as props children
+    const snapshotInJson = renderer.create(<CompanyInfo foundedYear="2001" />).toJSON();
+    expect(snapshotInJson).toMatchSnapshot();
   });
 });
