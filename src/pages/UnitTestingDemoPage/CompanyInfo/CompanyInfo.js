@@ -20,7 +20,7 @@ const CompanyInfo = (props) => {
           setCountryName(event.target.value);
         }}
       />
-      <p>Please visit Cognizant {countryName} Website!</p>
+      <p>Please visit Cognizant {countryName} Website</p>
     </div>
   );
 };

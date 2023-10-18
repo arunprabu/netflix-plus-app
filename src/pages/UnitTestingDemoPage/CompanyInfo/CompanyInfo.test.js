@@ -93,4 +93,6 @@ describe('CompanyInfo', () => {
     const snapshotInJson = renderer.create(<CompanyInfo foundedYear="2001" />).toJSON();
     expect(snapshotInJson).toMatchSnapshot();
   });
+
+  // TODO: learn about the disadvantages of snapshot testing
 });
