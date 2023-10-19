@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import MenuList from "../MenuList/MenuList";
 
 // Functional component with Named Function
@@ -8,9 +9,9 @@ function Header() {
     <header>
       <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
+          <Link className="navbar-brand" to="/">
             Netflix Plus
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"

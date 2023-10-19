@@ -1,5 +1,5 @@
 // Component can be made up of JS, JSX and CSS (optional)
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import "./App.css"; // Importing styles for App comp
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";

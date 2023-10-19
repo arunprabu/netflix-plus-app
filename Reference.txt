@@ -130,7 +130,7 @@ Concepts
   Unit Testing [DONE]
 
   Performance Tuning [DONE]
-  Lazy Loading [10 mins]
+  Lazy Loading [DONE]
   Build and Deploy [10 mins]
   
   Redux [1 hour]
@@ -497,5 +497,16 @@ Project structure wihout folder for every component + with __tests__ folder
         HomePage.test.js 
 
 
-Files Walkthru 
----------------
+Build and Deployment 
+----
+  Build Checklist 
+  ----------------
+    1. open browser console and look for errors. if any found, fix that. 
+    2. fix all linting errors (LEARN ABOUT ESLINT INTEGRATION)
+    3. remove all console.logs 
+
+    npm run build 
+    
+    then, locate build folder -- the bundled project is inside 
+
+  

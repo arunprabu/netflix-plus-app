@@ -10,7 +10,7 @@ const TrendingVideos = () => {
   const [resolution, setResolution] = useState("4K");
   console.log(resolution);
 
-  const [videos, setVideos] = useState([
+  const [videos] = useState([
     {
       id: 1,
       title: "BBC Earth: The Power of Nature",

@@ -28,7 +28,7 @@ const UserDetails = () => {
         console.log("it is over!");
         setIsLoading(false);
       });
-  }, []);
+  }, [userId]);
 
   return (
     <div className="row mt-2">
