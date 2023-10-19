@@ -127,7 +127,7 @@ Concepts
 
   Rest API calls [DONE]
 
-  Unit Testing [4 hours]
+  Unit Testing [DONE]
 
   Performance Tuning [10 mins]
   Lazy Loading [10 mins]
@@ -443,8 +443,13 @@ Unit Testing
   2. Testing Props [DONE]
   3. Testing useState and Event [DONE]
   4. Testing Styles [DONE]
-  5. Snapshot Testing 
-  
+  5. Snapshot Testing [DONE]
+  6. Mocks (EXPLORE)
+  7. Spies (EXPLORE)
+  8. Stubs (EXPLORE)
+  9. Router Testing (EXPLORE)
+  10. Testing Reducer (EXPLORE)
+  11. Testing Context (EXPLORE)
 
 Project Structure with folder for every component 
 ---------------
