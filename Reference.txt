@@ -129,7 +129,7 @@ Concepts
 
   Unit Testing [DONE]
 
-  Performance Tuning [10 mins]
+  Performance Tuning [DONE]
   Lazy Loading [10 mins]
   Build and Deploy [10 mins]
   
